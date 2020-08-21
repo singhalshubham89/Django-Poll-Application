@@ -1,5 +1,6 @@
 To start virtual enviroment for Django
 Poll\Scripts\activate.bat
+cd Poll\mysite
 
 python -m django --version
 Creating a project 
@@ -43,3 +44,10 @@ start a new Python interactive shell by running
 Create a superuser
     python manage.py createsuperuser
 
+Running Tests
+    python manage.py test polls
+
+Django test client
+    python manage.py shell
+    from django.test.utils import setup_test_environment
+    setup_test_environment():- nstalls a template renderer which will allow us to examine some additional attributes on responses such as response.context that otherwise wouldn’t be available
